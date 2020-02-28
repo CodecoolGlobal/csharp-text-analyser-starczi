@@ -13,7 +13,7 @@ namespace csharp_text_analyser_starczi
                 var wordIter = fileContent.WordIterator();
                 StatisticalAnalysis Analyzer = new StatisticalAnalysis(charIter);
 
-                View.Print(Analyzer.CountOf("p"));
+                View.Print(Analyzer.Size());
             }
         }
     }
