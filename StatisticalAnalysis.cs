@@ -4,20 +4,21 @@ namespace csharp_text_analyser_starczi
     class StatisticalAnalysis
     {
         public Iterator Iterator { get; set; }
+        public View View { get; set; }
         public StatisticalAnalysis(Iterator iterator)
         {
-            View view = new View();
+            View = new View();
             Iterator = iterator;
         }
-        int CountOf(params string[] list)
+        public int CountOf(params string[] list)
         {
             return 1;
         }
-        int DictionarySize()
+        public int DictionarySize()
         {
             return 1;
         }
-        int Size()
+        public int Size()
         {
             return 1;
         }

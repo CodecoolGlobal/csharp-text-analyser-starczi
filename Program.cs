@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections.Generic;
 
 namespace csharp_text_analyser_starczi
 {
@@ -6,7 +6,15 @@ namespace csharp_text_analyser_starczi
     {
         static void Main(string[] args)
         {
-            // StatisticalAnalysis Analyzer = new StatisticalAnalysis();
+            foreach(var fileName in args)
+            {
+                FileContent fileContent = new FileContent(fileName);
+                var charIter = fileContent.CharIterator();
+                var wordIter = fileContent.WordIterator();
+                StatisticalAnalysis Analyzer = new StatisticalAnalysis(charIter);
+
+                View.Print(Analyzer.CountOf("p"));
+            }
         }
     }
 }

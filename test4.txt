@@ -1,0 +1,4 @@
+ostatni
+string
+przedostatni
+string
