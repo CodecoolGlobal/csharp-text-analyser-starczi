@@ -8,18 +8,15 @@ namespace csharp_text_analyser_starczi
         public FileContent(string fileName)
         {
             FileName=fileName;
-            Text = File.ReadAllText(FileName).Replace("\n", string.Empty);
-
+            Text = File.ReadAllText(FileName).ToLower();
         }
         public Iterator CharIterator()
         {
-            var CharIterator = new CharIterator(new FileContent(FileName));
-            return CharIterator;
+            return new CharIterator(this);
         }
         public Iterator WordIterator()
         {
-            var WordIterator = new WordIterator(new FileContent(FileName));
-            return WordIterator;    
+            return new WordIterator(this);    
         }
     }
 }

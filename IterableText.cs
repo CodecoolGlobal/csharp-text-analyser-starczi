@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 namespace csharp_text_analyser_starczi
 {
     interface IterableText

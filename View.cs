@@ -3,21 +3,19 @@ namespace csharp_text_analyser_starczi
 {
     public class View
     {
-        public static void Print(int Integer)
+        public static void Print(string msg, int result)
         {
-            System.Console.WriteLine(Integer);
+            System.Console.WriteLine($"{msg} ---> {result}");
         }
-        public static void Print(string String)
+        public static void Print(string msg, List<string> List)
         {
-
-        }
-        public static void Print(List<string> List)
-        {
-
-        }
-        public static void Print(Dictionary<string,int> Dictionary, int Integer)
-        {
-            
+            var i = 1;
+            System.Console.WriteLine(msg);
+            foreach(var element in List)
+            {
+                System.Console.WriteLine($"{i}. {element}");
+                i++;
+            }
         }
     }
 }

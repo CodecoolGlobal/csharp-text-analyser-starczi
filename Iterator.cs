@@ -7,5 +7,6 @@ namespace csharp_text_analyser_starczi
         int Current { get; set; }
         bool HasNext();
         string MoveNext();
+        void Reset();
     }
 }

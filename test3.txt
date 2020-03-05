@@ -1,1 +1,2 @@
-pierwszy string drugi string
+pierwszy string drugi string string
+czwarty piąty szósty string string string
